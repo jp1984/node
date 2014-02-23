@@ -1,6 +1,6 @@
 var http = require('http');
 var pg = require('pg');
-var rs;
+
 http.createServer(function(request,response){
 
 pg.connect(process.env.HEROKU_POSTGRESQL_JADE_URL, function(err, client, done) {
@@ -11,7 +11,7 @@ pg.connect(process.env.HEROKU_POSTGRESQL_JADE_URL, function(err, client, done) {
 	console.log(result.rows);
 
     response.writeHead(200,{"Content-Type": "application/json"});
-    response.end(JSON.stringify(rs));
+    response.end(JSON.stringify(result.rows));
   });
 });
 
