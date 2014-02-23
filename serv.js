@@ -14,8 +14,6 @@ pg.connect(process.env.HEROKU_POSTGRESQL_JADE_URL, function(err, client, done) {
 });
 
 
-response.writeHead(200);
-response.end(result.rows);
 
 }).listen(process.env.PORT || 8080);
 
