@@ -8,7 +8,7 @@ pg.connect(process.env.HEROKU_POSTGRESQL_JADE_URL, function(err, client, done) {
     done();
     if(err) return console.error(err);
     console.log(result.rows);
-    response.writeHead(200);
+    response.writeHead(200,{"Content-Type": "application/json"});
     response.end(result.rows);
   });
 });
