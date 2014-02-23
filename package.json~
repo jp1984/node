@@ -1,14 +1,11 @@
 {
   "name": "myserv",
-  "version": "0.0.1",
-  "description": "great scott",
+  "version": "0.0.0",
+  "description": "",
   "main": "serv.js",
-  "engines":{
-"node":"0.10.15"
-},	
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "jj",
+  "author": "",
   "license": "BSD"
 }
